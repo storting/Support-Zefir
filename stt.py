@@ -24,6 +24,6 @@ def learn():
                 data = q.get()
                 if rec.AcceptWaveform(data):
                     data = json.loads(rec.Result())['text']
-                    AI.recognize(data)
+                    return data
                 #else:
                     #print(rec.PartialResult())

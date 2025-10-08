@@ -1,4 +1,11 @@
-import tts, stt
+import tts, stt, AI
+from multiprocessing import Process, Queue
+
+
+
 
 if __name__ == '__main__':
-    stt.learn()
+
+    data = stt.learn()
+    answer = AI.recognize(data)
+    tts.speak(answer)
